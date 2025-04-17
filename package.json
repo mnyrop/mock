@@ -1,28 +1,28 @@
 {
-  "name": "11quid-and-windy",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "mock",
+  "version": "0.1.0",
+  "type": "module",
   "scripts": {
     "dev": "npm-run-all -p dev:*",
     "build": "run-s build:*",
-    "dev:css": "npx @tailwindcss/cli -i src/css/styles.css -o dist/css/styles.css --watch --postcss",
+    "format": "run-s format:*",
+    "dev:css": "npx @tailwindcss/cli -i src/_styles/main.css -o _site/main.css --watch --postcss",
     "dev:11ty": "eleventy --serve",
-    "build:css": "npx @tailwindcss/cli -i src/css/styles.css -o dist/css/styles.css --postcss",
-    "build:11ty": "env NODE_ENV=production eleventy"
+    "build:css": "npx @tailwindcss/cli -i src/_styles/main.css -o _site/main.css --postcss",
+    "build:11ty": "env NODE_ENV=production eleventy",
+    "format:js": "prettier --write '**/*.js'  '**/*.json'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy": "3.0.0",
     "@tailwindcss/cli": "^4.0.8",
     "@tailwindcss/postcss": "^4.0.8",
-    "clean-css": "^5.3.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.5.3",
     "prettier": "^3.5.1",
-    "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.0.8"
   }
 }

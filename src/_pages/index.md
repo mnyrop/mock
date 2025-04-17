@@ -6,4 +6,4 @@ permalink: "/index.html"
 home: true
 ---
 
-<h1 class="text-5xl text-blue-500">{{title}}</h1>
+<h1 class="text-5x">{{title}}</h1>

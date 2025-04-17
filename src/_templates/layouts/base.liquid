@@ -1,11 +1,14 @@
 ---
-permalink: "{{ page.fileSlug | slugify }}/index.html"
+test: test
 ---
 <!doctype html>
 <html lang="en" id="top" data-theme="light" class="bg-base-100 text-base-content scroll-pt-20 scroll-smooth">
-  {% include "partials/head.html" %}
+  {% include "head" %}
   <body class="flex flex-col min-h-screen overflow-x-clip">
-    <main class="flex-1">
+    <header class="flex border-2 border-red-500">
+      <div>{{ site.title }}</div>
+    </header>
+    <main class="flex-1 border-2 border-green-600">
       {{ content }}
     </main>
   </body>
