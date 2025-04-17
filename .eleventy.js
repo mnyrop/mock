@@ -1,6 +1,11 @@
-const cleancss = require('clean-css');
 
-module.exports = function(eleventyConfig) {
+
+module.exports = async function(eleventyConfig) {
+  const cleancss = await require('clean-css');
+  const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
+
+	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
   // minify css filter
   eleventyConfig.addFilter('cssmin', function(code) {
     return new cleancss({}).minify(code).styles;
@@ -17,6 +22,7 @@ module.exports = function(eleventyConfig) {
   
   return {
     markdownTemplateEngine: 'liquid',
+    pathPrefix: "/mock/",
     dir: {
       input: 'src',
       output: 'dist',
