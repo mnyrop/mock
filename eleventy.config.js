@@ -19,3 +19,7 @@ export default async function (eleventyConfig) {
   // add plugin to handle pathprefix
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 }
+
+export const config = {
+	pathPrefix: "/mock/"
+}
