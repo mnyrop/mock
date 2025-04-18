@@ -1,3 +1,11 @@
 {
-  "title": "Mock"
+  "title": "This is a Mock",
+  "menu": [
+    { "title": "Home" },
+    { "title": "About" },
+    { "title": "Exhibits" },
+    { "title": "Browse" },
+    { "title": "Search" },
+    { "title": "Reuse" }
+  ]
 }

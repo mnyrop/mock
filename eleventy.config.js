@@ -9,6 +9,8 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "src/assets": "/" });
 
+  eleventyConfig.setLiquidParameterParsing("builtin");
+
   // inspect objects as JSON
   eleventyConfig.addFilter("jsonify", (data) => {
     return JSON.stringify(data, null, "\t");

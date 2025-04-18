@@ -1,0 +1,10 @@
+<nav class="flex md:flex-nowrap flex-wrap justify-between border-b w-full p-6">
+  <div class="">{{ site.title }}</div>
+  <div class="flex flex-row flex-nowrap">
+    {% for item in site.menu %}
+      <div class="mr-2">
+        <a class="" href=""#>{{ item.title }}</a>
+      </div>
+    {% endfor %}
+  </div>
+</nav>
