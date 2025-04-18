@@ -1,8 +1,12 @@
-<header class="px-6 py-6 gap-6 flex flex-row md:flex-nowrap flex-wrap items-center">
-  <div class="md:basis-1/2 text-5xl my-12">
-    <h1 class="max-w-[30ch]">{{ title }}</h1>
+<header class="px-6 pt-20 md:gap-12 flex flex-row md:flex-nowrap flex-wrap items-start">
+  <div class="md:basis-1/2 text-5xl mb-12">
+    <h1 class="max-w-[18ch]">
+      <div class="h-[2rem] aspect-square bg-orange-200 inline-block align-baseline"></div>
+      <span>{{ title }}</span>
+    </h1>
   </div>
   <div class="md:basis-1/2">
-    <div class="max-w-[60ch] py-2 text-xl">{{ description }}</div>
+    <div class="max-w-[36ch] py-2 text-xl">{{ description }}</div>
+    (<a class="link" href="#">See More</a>)
   </div>
 </header>

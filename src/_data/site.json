@@ -1,11 +1,11 @@
 {
   "title": "This is a Mock",
   "menu": [
-    { "title": "Home" },
-    { "title": "About" },
-    { "title": "Exhibits" },
-    { "title": "Browse" },
-    { "title": "Search" },
-    { "title": "Reuse" }
+    { "title": "Home", "link": "/" },
+    { "title": "About", "link": "/about"  },
+    { "title": "Exhibits", "link": "#"  },
+    { "title": "Browse", "link": "#" },
+    { "title": "Search", "link": "#" },
+    { "title": "Reuse", "link": "#" }
   ]
 }

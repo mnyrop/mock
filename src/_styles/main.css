@@ -19,3 +19,11 @@
           rgba(0,0,0,0) calc(50% + 0.8px),
           rgba(0,0,0,0) 100%);
 }
+ 
+.link {
+  @apply border-b hover:border-transparent;
+}
+
+.color-link {
+  @apply text-green-500 border-b hover:border-transparent;
+}
