@@ -6,7 +6,7 @@
   <title>This is a Mock | I'm a longer and more academic (sub)title for the site</title>
 
   <link href="/mock/main.css" rel="stylesheet">
-  <link rel="icon" href="/mock/favicon.png" type="image/png">
+  <link rel="icon" href="/mock/assets/favicon.png" type="image/png">
 </head>
 
   <body class="m-0 p-0 flex flex-col h-dvh">
@@ -17,32 +17,74 @@
   </a>
   <div class="flex flex-row flex-nowrap">
     
-      <div class="mr-2">
-        <a href="/mock/" class="link text-unset">Home</a>
+      
+      <div class="relative inline-block text-left mr-6">
+        <a class="inline-flex w-full cursor-pointer link" href="/mock/">
+          Home
+        </a>
       </div>
+      
     
-      <div class="mr-2">
-        <a href="/mock/about" class="link text-unset">About</a>
+      
+      
+      <div class="group relative dropdown cursor-pointer text-left mr-6">
+        <button id="dropdown-button" class="inline-flex w-full cursor-pointer link">
+          About
+        </button>
+        <div class="group-hover:block absolute left-0 dropdown-menu hidden h-auto w-full">
+          <ul class="top-0 py-1 bg-white w-full">
+            
+            <li class="py-1 w-full"><a class="block" href="/mock/about">1</a></li>
+            
+            <li class="py-1 w-full"><a class="block" href="/mock/about">2</a></li>
+            
+            <li class="py-1 w-full"><a class="block" href="/mock/about">3</a></li>
+            
+          </ul>
+        </div>
       </div>
+      
     
-      <div class="mr-2">
-        <a href="#" class="link text-unset">Exhibits</a>
+      
+      
+      <div class="group relative dropdown cursor-pointer text-left mr-6">
+        <button id="dropdown-button" class="inline-flex w-full cursor-pointer link">
+          Exhibits
+        </button>
+        <div class="group-hover:block absolute left-0 dropdown-menu hidden h-auto w-full">
+          <ul class="top-0 py-1 bg-white w-full">
+            
+            <li class="py-1 w-full"><a class="block" href="#">One</a></li>
+            
+            <li class="py-1 w-full"><a class="block" href="#">Two</a></li>
+            
+            <li class="py-1 w-full"><a class="block" href="#">Three</a></li>
+            
+          </ul>
+        </div>
       </div>
+      
     
-      <div class="mr-2">
-        <a href="#" class="link text-unset">Browse</a>
+      
+      <div class="relative inline-block text-left mr-6">
+        <a class="inline-flex w-full cursor-pointer link" href="#">
+          Search
+        </a>
       </div>
+      
     
-      <div class="mr-2">
-        <a href="#" class="link text-unset">Search</a>
+      
+      <div class="relative inline-block text-left ">
+        <a class="inline-flex w-full cursor-pointer link" href="#">
+          Reuse
+        </a>
       </div>
-    
-      <div class="mr-2">
-        <a href="#" class="link text-unset">Reuse</a>
-      </div>
+      
     
   </div>
 </nav>
+
+
     <main class="flex-1 overflow-y-auto overflow-x-hidden">
       <header class="px-6 pt-20 md:gap-12 flex flex-row md:flex-nowrap flex-wrap items-start">
   <div class="md:basis-1/2 text-5xl mb-12">
@@ -53,7 +95,6 @@
   </div>
   <div class="md:basis-1/2">
     <div class="max-w-[36ch] py-2 text-xl">I'm a description for the site that shows up on the homepage specifically. I might have links to other parts of the website in a wiki-like way.</div>
-    (<a class="link" href="#">See More</a>)
   </div>
 </header>
       <section class="px-6 py-24">
@@ -61,7 +102,7 @@
     <div class="h-[1.5rem] aspect-square bg-amber-200 inline-block align-baseline"></div>
     I'm a sub heading for a gallery section
   </h2>
-  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 lg:gap-8"><a href=".">
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 lg:gap-8"><a href="/mock/items/sample">
       <div class="bg-white font-mono">
         <div>
           <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
@@ -69,7 +110,7 @@
           <div class="aspect-square w-full border crossed my-6"></div>
         </div>
       </div>
-    </a><a href=".">
+    </a><a href="/mock/items/sample">
       <div class="bg-white font-mono">
         <div>
           <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
@@ -77,7 +118,7 @@
           <div class="aspect-square w-full border crossed my-6"></div>
         </div>
       </div>
-    </a><a href=".">
+    </a><a href="/mock/items/sample">
       <div class="bg-white font-mono">
         <div>
           <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
@@ -85,7 +126,7 @@
           <div class="aspect-square w-full border crossed my-6"></div>
         </div>
       </div>
-    </a><a href=".">
+    </a><a href="/mock/items/sample">
       <div class="bg-white font-mono">
         <div>
           <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
@@ -93,7 +134,7 @@
           <div class="aspect-square w-full border crossed my-6"></div>
         </div>
       </div>
-    </a><a href=".">
+    </a><a href="/mock/items/sample">
       <div class="bg-white font-mono">
         <div>
           <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
@@ -101,7 +142,7 @@
           <div class="aspect-square w-full border crossed my-6"></div>
         </div>
       </div>
-    </a><a href=".">
+    </a><a href="/mock/items/sample">
       <div class="bg-white font-mono">
         <div>
           <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
@@ -109,7 +150,7 @@
           <div class="aspect-square w-full border crossed my-6"></div>
         </div>
       </div>
-    </a><a href=".">
+    </a><a href="/mock/items/sample">
       <div class="bg-white font-mono">
         <div>
           <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
@@ -117,7 +158,7 @@
           <div class="aspect-square w-full border crossed my-6"></div>
         </div>
       </div>
-    </a><a href=".">
+    </a><a href="/mock/items/sample">
       <div class="bg-white font-mono">
         <div>
           <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
@@ -125,7 +166,7 @@
           <div class="aspect-square w-full border crossed my-6"></div>
         </div>
       </div>
-    </a><a href=".">
+    </a><a href="/mock/items/sample">
       <div class="bg-white font-mono">
         <div>
           <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
@@ -184,4 +225,7 @@
   <div>I'm a footer! I have custom args: ["hello", "world"]</div>
 </footer>
   </body>
+  <script>
+
+</script>
 </html>
