@@ -2,10 +2,25 @@
   "title": "This is a Mock",
   "menu": [
     { "title": "Home", "link": "/" },
-    { "title": "About", "link": "/about"  },
-    { "title": "Exhibits", "link": "#"  },
-    { "title": "Browse", "link": "#" },
-    { "title": "Search", "link": "#" },
+    { 
+      "title": "About", 
+      "sub": [
+       { "title": "1", "link": "/about"  },
+       { "title": "2", "link": "/about"  },
+       { "title": "3", "link": "/about"  }
+      ]
+    },
+    { 
+      "title": "Exhibits", 
+      "sub": [
+        { "title": "One", "link": "#" },
+        { "title": "Two", "link": "#" },
+        { "title": "Three", "link": "#" }
+      ] 
+    },
+    { 
+      "title": "Search", "link": "#"
+    },
     { "title": "Reuse", "link": "#" }
   ]
 }

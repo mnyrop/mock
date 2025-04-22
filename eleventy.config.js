@@ -7,7 +7,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.setLayoutsDirectory("../_templates/layouts");
   eleventyConfig.setDataDirectory("../_data");
 
-  eleventyConfig.addPassthroughCopy({ "src/assets": "/" });
+  eleventyConfig.addPassthroughCopy({ "src/assets": "/assets" });
 
   eleventyConfig.setLiquidParameterParsing("builtin");
 

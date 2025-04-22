@@ -21,9 +21,10 @@
 }
  
 .link {
-  @apply border-b hover:border-transparent;
+  @apply border-b border-transparent hover:border-inherit;
 }
 
+/*
 .color-link {
   @apply text-green-500 border-b hover:border-transparent;
-}
+} */

@@ -11,7 +11,7 @@ home: true
   </h2>
   <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 lg:gap-8">
     {%- for i in (1..9) -%}
-    <a href="">
+    <a href="/items/sample">
       <div class="bg-white font-mono">
         <div>
           <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>

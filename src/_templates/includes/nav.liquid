@@ -5,9 +5,39 @@
   </a>
   <div class="flex flex-row flex-nowrap">
     {% for item in site.menu %}
-      <div class="mr-2">
-        <a href="{{ item.link }}" class="link text-unset">{{ item.title }}</a>
+      {% if item.sub %}
+      {% comment %} <div class="relative inline-block text-left mr-2">
+        <button id="dropdown-button" class="inline-flex w-full cursor-pointer link">
+          {{ item.title }}
+        </button>
+        <div id="dropdown-menu" class="origin-top-right absolute right-0 mt-2 w-56 shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+          <div class="py-2 p-2" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-button">
+            {% for sub in item.sub %}
+            <a href="{{ sub.link }}" class="block px-4 py-2 mb-1 text-sm bg-white hover:bg-gray-100" role="menuitem">{{ sub.title }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      </div> {% endcomment %}
+      <div class="group relative dropdown cursor-pointer text-left {% unless forloop.last %}mr-6{% endunless %}">
+        <button id="dropdown-button" class="inline-flex w-full cursor-pointer link">
+          {{ item.title }}
+        </button>
+        <div class="group-hover:block absolute left-0 dropdown-menu hidden h-auto w-full">
+          <ul class="top-0 py-1 bg-white w-full">
+            {% for sub in item.sub %}
+            <li class="py-1 w-full"><a class="block" href="{{ sub.link }}">{{ sub.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
+      {% else %}
+      <div class="relative inline-block text-left {% unless forloop.last %}mr-6{% endunless %}">
+        <a class="inline-flex w-full cursor-pointer link" href="{{ item.link }}">
+          {{ item.title }}
+        </a>
+      </div>
+      {% endif %}
     {% endfor %}
   </div>
 </nav>
+
