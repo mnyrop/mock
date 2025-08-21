@@ -3,13 +3,9 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: 'ZurichBT', sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-orange-200: oklch(90.1% 0.076 70.697);
-    --color-amber-200: oklch(92.4% 0.12 95.746);
-    --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-slate-400: oklch(70.4% 0.04 256.788);
     --color-slate-600: oklch(44.6% 0.043 257.281);
     --color-gray-100: oklch(96.7% 0.003 264.542);
@@ -18,8 +14,12 @@
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-5xl: 3rem;
@@ -257,15 +257,6 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
-  .h-\[1\.5rem\] {
-    height: 1.5rem;
-  }
-  .h-\[1rem\] {
-    height: 1rem;
-  }
-  .h-\[2rem\] {
-    height: 2rem;
-  }
   .h-auto {
     height: auto;
   }
@@ -280,12 +271,6 @@
   }
   .w-full {
     width: 100%;
-  }
-  .max-w-\[18ch\] {
-    max-width: 18ch;
-  }
-  .max-w-\[36ch\] {
-    max-width: 36ch;
   }
   .max-w-\[60ch\] {
     max-width: 60ch;
@@ -363,15 +348,6 @@
   .border-slate-400 {
     border-color: var(--color-slate-400);
   }
-  .bg-amber-200 {
-    background-color: var(--color-amber-200);
-  }
-  .bg-amber-600 {
-    background-color: var(--color-amber-600);
-  }
-  .bg-orange-200 {
-    background-color: var(--color-orange-200);
-  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -408,14 +384,15 @@
   .pr-2 {
     padding-right: calc(var(--spacing) * 2);
   }
+  .pb-24 {
+    padding-bottom: calc(var(--spacing) * 24);
+  }
   .text-left {
     text-align: left;
   }
-  .align-baseline {
-    vertical-align: baseline;
-  }
-  .font-mono {
-    font-family: var(--font-mono);
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -424,6 +401,10 @@
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
   .text-sm {
     font-size: var(--text-sm);
@@ -504,6 +485,43 @@
       gap: calc(var(--spacing) * 8);
     }
   }
+  .\[\&_a\]\:underline {
+    & a {
+      text-decoration-line: underline;
+    }
+  }
+  .\[\&_a\]\:hover\:underline {
+    & a {
+      &:hover {
+        @media (hover: hover) {
+          text-decoration-line: underline;
+        }
+      }
+    }
+  }
+  .\[\&_p\]\:max-w-\[60ch\] {
+    & p {
+      max-width: 60ch;
+    }
+  }
+  .\[\&_p\]\:text-2xl {
+    & p {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .\[\&\>\*\]\:p-6 {
+    &>* {
+      padding: calc(var(--spacing) * 6);
+    }
+  }
+}
+@font-face {
+  font-family: 'ZurichBT';
+  src: url('assets/ZurichBT-Regular.woff') format('woff');
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
 }
 .crossed {
   background: linear-gradient(to top left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(50% - 0.8px), rgba(0,0,0,1) 50%, rgba(0,0,0,0) calc(50% + 0.8px), rgba(0,0,0,0) 100%), linear-gradient(to top right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(50% - 0.8px), rgba(0,0,0,1) 50%, rgba(0,0,0,0) calc(50% + 0.8px), rgba(0,0,0,0) 100%);
@@ -515,6 +533,42 @@
   &:hover {
     @media (hover: hover) {
       border-color: inherit;
+    }
+  }
+}
+@layer utilities {
+  .hamburger-toggle {
+    &>div {
+      height: calc(var(--spacing) * 0);
+    }
+    &>div {
+      background-color: var(--color-white);
+    }
+    &>div {
+      &::before {
+        content: var(--tw-content);
+        --tw-translate-y: calc(var(--spacing) * 0);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+    &>div {
+      &::before {
+        content: var(--tw-content);
+        rotate: 45deg;
+      }
+    }
+    &>div {
+      &::after {
+        content: var(--tw-content);
+        --tw-translate-y: calc(var(--spacing) * 0);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+    &>div {
+      &::after {
+        content: var(--tw-content);
+        rotate: calc(45deg * -1);
+      }
     }
   }
 }
@@ -596,6 +650,26 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-content {
+  syntax: "*";
+  initial-value: "";
+  inherits: false;
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -616,6 +690,10 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-content: "";
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
     }
   }
 }

@@ -3,17 +3,16 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title>This is a Mock | This is a Sample Item</title>
+  <title>Shorter Site-Wide Title | This is a Sample Item</title>
 
   <link href="/mock/main.css" rel="stylesheet">
   <link rel="icon" href="/mock/assets/favicon.png" type="image/png">
 </head>
 
   <body class="m-0 p-0 flex flex-col h-dvh">
-    <nav class="flex md:flex-nowrap flex-wrap justify-between full p-6">
+    <nav class="flex md:flex-nowrap flex-wrap justify-between p-6">
   <a class="text-xl" href="/mock/">
-    <div class="h-[1rem] aspect-square bg-amber-600 inline-block align-baseline"></div>
-    This is a Mock
+    Shorter Site-Wide Title
   </a>
   <div class="flex flex-row flex-nowrap">
     
@@ -66,18 +65,22 @@
       
     
       
-      <div class="relative inline-block text-left mr-6">
-        <a class="inline-flex w-full cursor-pointer link" href="#">
-          Search
-        </a>
-      </div>
       
-    
-      
-      <div class="relative inline-block text-left ">
-        <a class="inline-flex w-full cursor-pointer link" href="#">
-          Reuse
-        </a>
+      <div class="group relative dropdown cursor-pointer text-left ">
+        <button id="dropdown-button" class="inline-flex w-full cursor-pointer link">
+          Collection
+        </button>
+        <div class="group-hover:block absolute left-0 dropdown-menu hidden h-auto w-full">
+          <ul class="top-0 py-1 bg-white w-full">
+            
+            <li class="py-1 w-full"><a class="block" href="#">Search</a></li>
+            
+            <li class="py-1 w-full"><a class="block" href="#">Browse</a></li>
+            
+            <li class="py-1 w-full"><a class="block" href="#">Reuse</a></li>
+            
+          </ul>
+        </div>
       </div>
       
     
@@ -85,19 +88,11 @@
 </nav>
 
 
-    <main class="flex-1 overflow-y-auto overflow-x-hidden">
-      <header class="px-6 pt-20 md:gap-12 flex flex-row md:flex-nowrap flex-wrap items-start">
-  <div class="md:basis-1/2 text-5xl mb-12">
-    <h1 class="max-w-[18ch]">
-      <div class="h-[2rem] aspect-square bg-orange-200 inline-block align-baseline"></div>
-      <span>This is a Sample Item</span>
-    </h1>
-  </div>
-  <div class="md:basis-1/2">
-    <div class="max-w-[36ch] py-2 text-xl"></div>
-  </div>
+    <main class="flex-1 overflow-y-auto overflow-x-hidden pb-24">
+      <header class="px-6 pt-20">
+  <h1 class="text-5xl mb-12">[H1] This is a Sample Item</h1>
 </header>
-      <section class="px-6">
+<section class="px-6">
   <div class="flex flex-wrap md:flex-nowrap justify-center md:gap-6 w-full">
     <div class="basis-full md:basis-1/2">
       <div class="border crossed w-full aspect-4/3 mb-12"></div>
@@ -123,7 +118,7 @@
   </div>
 </section>
     </main>
-    <footer class="h-10 p-2 border-t">
+    <footer class="h-10 px-6 py-2 border-t">
   <div>I'm a footer! I have custom args: ["hello", "world"]</div>
 </footer>
   </body>

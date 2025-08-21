@@ -3,17 +3,16 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title>This is a Mock | About</title>
+  <title>Shorter Site-Wide Title | About</title>
 
   <link href="/mock/main.css" rel="stylesheet">
   <link rel="icon" href="/mock/assets/favicon.png" type="image/png">
 </head>
 
   <body class="m-0 p-0 flex flex-col h-dvh">
-    <nav class="flex md:flex-nowrap flex-wrap justify-between full p-6">
+    <nav class="flex md:flex-nowrap flex-wrap justify-between p-6">
   <a class="text-xl" href="/mock/">
-    <div class="h-[1rem] aspect-square bg-amber-600 inline-block align-baseline"></div>
-    This is a Mock
+    Shorter Site-Wide Title
   </a>
   <div class="flex flex-row flex-nowrap">
     
@@ -66,18 +65,22 @@
       
     
       
-      <div class="relative inline-block text-left mr-6">
-        <a class="inline-flex w-full cursor-pointer link" href="#">
-          Search
-        </a>
-      </div>
       
-    
-      
-      <div class="relative inline-block text-left ">
-        <a class="inline-flex w-full cursor-pointer link" href="#">
-          Reuse
-        </a>
+      <div class="group relative dropdown cursor-pointer text-left ">
+        <button id="dropdown-button" class="inline-flex w-full cursor-pointer link">
+          Collection
+        </button>
+        <div class="group-hover:block absolute left-0 dropdown-menu hidden h-auto w-full">
+          <ul class="top-0 py-1 bg-white w-full">
+            
+            <li class="py-1 w-full"><a class="block" href="#">Search</a></li>
+            
+            <li class="py-1 w-full"><a class="block" href="#">Browse</a></li>
+            
+            <li class="py-1 w-full"><a class="block" href="#">Reuse</a></li>
+            
+          </ul>
+        </div>
       </div>
       
     
@@ -85,21 +88,25 @@
 </nav>
 
 
-    <main class="flex-1 overflow-y-auto overflow-x-hidden">
+    <main class="flex-1 overflow-y-auto overflow-x-hidden pb-24">
       <header class="px-6 pt-20 md:gap-12 flex flex-row md:flex-nowrap flex-wrap items-start">
   <div class="md:basis-1/2 text-5xl mb-12">
-    <h1 class="max-w-[18ch]">
-      <div class="h-[2rem] aspect-square bg-orange-200 inline-block align-baseline"></div>
-      <span>About</span>
+    <h1 class="">
+      <span>[H1] About</span>
     </h1>
+    <div class="py-6 text-2xl">I'm a description for this page. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</div>
   </div>
   <div class="md:basis-1/2">
-    <div class="max-w-[36ch] py-2 text-xl">I'm a description for this page. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</div>
+    <div class="border crossed  w-full aspect-3/2"></div>
   </div>
 </header>
-      
+<div class="[&>*]:p-6 [&_p]:text-2xl [&_p]:max-w-[60ch] [&_a]:underline [&_a]:hover:underline">
+  <p>I’m a description for this page. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+<p>I’m a description for this page. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.I’m a description for this page. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+
+</div>
     </main>
-    <footer class="h-10 p-2 border-t">
+    <footer class="h-10 px-6 py-2 border-t">
   <div>I'm a footer! I have custom args: ["hello", "world"]</div>
 </footer>
   </body>
