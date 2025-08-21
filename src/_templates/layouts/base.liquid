@@ -5,8 +5,7 @@
   {% include "head" %}
   <body class="m-0 p-0 flex flex-col h-dvh">
     {% include "nav" %}
-    <main class="flex-1 overflow-y-auto overflow-x-hidden">
-      {% include "header" %}
+    <main class="flex-1 overflow-y-auto overflow-x-hidden pb-24">
       {{ content }}
     </main>
     {% include "footer" arg1: "hello", arg2: "world" %}

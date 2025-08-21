@@ -1,6 +1,6 @@
 ---
 title: "This is a Sample Item"
-layout: "base"
+layout: "item"
 ---
 
 <section class="px-6">

@@ -1,5 +1,7 @@
+import markdownIt from 'markdown-it';
+
 export default async function (eleventyConfig) {
-  const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
+  const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy")
 
   eleventyConfig.setOutputDirectory("_site");
   eleventyConfig.setInputDirectory("src/_pages");
@@ -18,8 +20,11 @@ export default async function (eleventyConfig) {
 
   // add plugin to handle pathprefix
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-}
-
-export const config = {
-	pathPrefix: "/mock/"
+  eleventyConfig.setLibrary("md", markdownIt({
+		breaks: true,
+    html: true,
+    linkify: true,
+    typographer: true
+	}));
+return { pathPrefix: "/mock/" };
 }

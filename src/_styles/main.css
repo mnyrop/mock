@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'ZurichBT';
+  src: url('assets/ZurichBT-Regular.woff') format('woff');
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+}
+
 @theme {
-  --font-serif: 'Times New Roman', Times, serif;
+  --font-sans: 'ZurichBT', sans-serif;
 }
 
 .crossed {
@@ -28,3 +36,9 @@
 .color-link {
   @apply text-green-500 border-b hover:border-transparent;
 } */
+
+@layer utilities {
+  .hamburger-toggle {
+    @apply [&>div]:h-0 [&>div]:bg-white [&>div]:before:translate-y-0 [&>div]:before:rotate-45 [&>div]:after:translate-y-0 [&>div]:after:-rotate-45;
+  }
+}
