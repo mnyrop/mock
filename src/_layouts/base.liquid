@@ -2,13 +2,13 @@
 ---
 <!doctype html>
 <html lang="en" id="top" class="croll-pt-20 scroll-smooth">
-  {% include "head" %}
+  {% include "site/head" %}
   <body class="m-0 p-0 flex flex-col h-dvh">
-    {% include "nav" %}
+    {% include "site/navbar" %}
     <main class="flex-1 overflow-y-auto overflow-x-hidden pb-24">
       {{ content }}
     </main>
-    {% include "footer" arg1: "hello", arg2: "world" %}
+    {% include "site/footer" arg1: "hello", arg2: "world" %}
   </body>
-  {% include "scripts" %}
+  {% include "site/scripts" %}
 </html>

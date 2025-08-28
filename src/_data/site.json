@@ -4,29 +4,23 @@
     { "title": "Home", "link": "/" },
     {
       "title": "About",
-      "sub": [
-        { "title": "1", "link": "/about" },
-        { "title": "2", "link": "/about" },
-        { "title": "3", "link": "/about" }
-      ]
+      "link": "/about" 
     },
     {
       "title": "Exhibits",
       "sub": [
-        { "title": "One", "link": "#" },
-        { "title": "Two", "link": "#" },
-        { "title": "Three", "link": "#" }
+        { "title": "Simple", "link": "/exhibits/simple" },
+        { "title": "SideBySide", "link": "/exhibits/side-by-side" }
       ]
     },
     {
       "title": "Collection",
       "sub": [
         {
-          "title": "Search",
-          "link": "#"
+          "title": "Explore",
+          "link": "/explore"
         },
-        { "title": "Browse", "link": "#" },
-        { "title": "Reuse", "link": "#" }
+        { "title": "Reuse", "link": "/reuse" }
       ]
     }
   ]

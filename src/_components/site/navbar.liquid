@@ -5,18 +5,6 @@
   <div class="flex flex-row flex-nowrap">
     {% for item in site.menu %}
       {% if item.sub %}
-      {% comment %} <div class="relative inline-block text-left mr-2">
-        <button id="dropdown-button" class="inline-flex w-full cursor-pointer link">
-          {{ item.title }}
-        </button>
-        <div id="dropdown-menu" class="origin-top-right absolute right-0 mt-2 w-56 shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
-          <div class="py-2 p-2" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-button">
-            {% for sub in item.sub %}
-            <a href="{{ sub.link }}" class="block px-4 py-2 mb-1 text-sm bg-white hover:bg-gray-100" role="menuitem">{{ sub.title }}</a>
-            {% endfor %}
-          </div>
-        </div>
-      </div> {% endcomment %}
       <div class="group relative dropdown cursor-pointer text-left {% unless forloop.last %}mr-6{% endunless %}">
         <button id="dropdown-button" class="inline-flex w-full cursor-pointer link">
           {{ item.title }}

@@ -4,12 +4,12 @@ export default async function (eleventyConfig) {
   const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy")
 
   eleventyConfig.setOutputDirectory("_site");
-  eleventyConfig.setInputDirectory("src/_pages");
-  eleventyConfig.setIncludesDirectory("../_templates/includes");
-  eleventyConfig.setLayoutsDirectory("../_templates/layouts");
+  eleventyConfig.setInputDirectory("src/_content");
+  eleventyConfig.setIncludesDirectory("../_components");
+  eleventyConfig.setLayoutsDirectory("../_layouts");
   eleventyConfig.setDataDirectory("../_data");
 
-  eleventyConfig.addPassthroughCopy({ "src/assets": "/assets" });
+  eleventyConfig.addPassthroughCopy({ "src/_assets": "/assets" });
 
   eleventyConfig.setLiquidParameterParsing("builtin");
 
