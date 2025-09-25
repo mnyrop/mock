@@ -8,7 +8,7 @@
   font-style: normal;
 }
 
-@theme {
+:root {
   --font-sans: 'ZurichBT', sans-serif;
 }
 
@@ -28,8 +28,13 @@
           rgba(0,0,0,0) 100%);
 }
  
-.link {
-  @apply border-b border-transparent hover:border-inherit;
+ .link {
+  border-bottom-width: 1px;
+  border-bottom-color: transparent;
+}
+
+.link:hover {
+  border-bottom-color: inherit;
 }
 
 /*
@@ -38,7 +43,15 @@
 } */
 
 @layer utilities {
-  .hamburger-toggle {
-    @apply [&>div]:h-0 [&>div]:bg-white [&>div]:before:translate-y-0 [&>div]:before:rotate-45 [&>div]:after:translate-y-0 [&>div]:after:-rotate-45;
+  /* Expanded hamburger-toggle styles to avoid using @apply with complex selectors */
+  .hamburger-toggle > div {
+    height: 0;
+    background-color: white;
+  }
+  .hamburger-toggle > div::before {
+    transform: translateY(0) rotate(45deg);
+  }
+  .hamburger-toggle > div::after {
+    transform: translateY(0) rotate(-45deg);
   }
 }
