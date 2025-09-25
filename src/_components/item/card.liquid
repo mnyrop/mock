@@ -1,9 +1,11 @@
-<a href="/items/sample">
+<a href="/item/{{ item.pid }}">
   <div class="bg-white">
     <div>
       <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
-      <p class="leading-snug text-lg">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-      <div class="aspect-square w-full border crossed my-6"></div>
+      <p class="leading-snug text-lg">{{ item.label | default:"Lorem ipsum dolor sit amet consectetur adipiscing elit." }}</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/files/{{ item.pid }}.jpg" alt="{{ item.label }}" class="transition duration-300 ease-in-out hover:scale-110"/>
+      </div>
     </div>
   </div>
 </a>

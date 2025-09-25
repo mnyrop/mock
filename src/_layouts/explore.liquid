@@ -40,7 +40,7 @@ layout: base
               <option value="title">Field #{{i}}</option>
               {% endfor %}
             </select>
-            <input type="text" name="q" value="{{ request.params.q | escape }}" placeholder="Search..." class="flex-grow border-t border-b border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="text" name="q" placeholder="Search..." class="flex-grow border-t border-b border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
             <button type="submit" class="cursor-pointer bg-black text-white px-4 py-2 rounded-r  focus:outline-none focus:ring-2 focus:ring-blue-500">Search</button>
           </div>
         </form>

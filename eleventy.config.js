@@ -10,12 +10,23 @@ export default async function (eleventyConfig) {
   eleventyConfig.setDataDirectory("../_data");
 
   eleventyConfig.addPassthroughCopy({ "src/_assets": "/assets" });
+  eleventyConfig.addPassthroughCopy({ "src/_data/demo/files": "/files" });
 
   eleventyConfig.setLiquidParameterParsing("builtin");
 
   // inspect objects as JSON
-  eleventyConfig.addFilter("jsonify", (data) => {
+  eleventyConfig.addFilter("json", (data) => {
     return JSON.stringify(data, null, "\t");
+  });
+
+  // parse CSV files in _data
+  const { parse } = await import("csv-parse/sync");
+  eleventyConfig.addDataExtension("csv", (contents) => {
+    const records = parse(contents, {
+      columns: true,
+      skip_empty_lines: true,
+    })
+    return records
   });
 
   // add plugin to handle pathprefix

@@ -24,5 +24,9 @@
     "postcss": "^8.5.3",
     "prettier": "^3.5.1",
     "tailwindcss": "^4.0.8"
+  },
+  "dependencies": {
+    "csv-parse": "^6.1.0",
+    "openseadragon": "^5.0.1"
   }
 }
