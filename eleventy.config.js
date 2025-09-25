@@ -11,6 +11,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "src/_assets": "/assets" });
   eleventyConfig.addPassthroughCopy({ "src/_data/demo/files": "/files" });
+  eleventyConfig.addPassthroughCopy({ "src/_media": "/media" });
 
   eleventyConfig.setLiquidParameterParsing("builtin");
 
