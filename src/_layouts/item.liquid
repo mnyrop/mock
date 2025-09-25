@@ -1,7 +1,33 @@
 ---
 layout: base
 ---
-<header class="px-6 pt-20">
-  <h1 class="text-5xl mb-12">[H1] {{ title }}</h1>
+
+<header class="flex px-6 pt-20">
+  <div class="basis-5/6">
+    <h1 class="text-secondary text-5xl mb-12 md:text-4xl md:tracking-tight font-bold leading-tight max-w-3xl">
+      [H1] {{ item.label }}
+    </h1>
+  </div>
+  <div class="basis-1/6 h-10 md:h-12 text-right flex justify-end">
+    <a aria-label="navigate previous page" href="{{ pagination.href.previous | default: pagination.href.last}}"
+      class="text-2xl tooltip tooltip-bottom" data-tip="Previous item">
+      Previous ←
+    </a>
+    <span class="mx-6"></span>
+    <a aria-label="navigate next page" href="{{ pagination.href.next | default: pagination.href.first }}"
+      class="text-2xl tooltip tooltip-bottom" data-tip="Next item">
+      Next →
+    </a>
+  </div>
 </header>
-{{ content }}
+
+<section class="px-6">
+  <div class="flex flex-wrap md:flex-nowrap justify-center md:gap-6 w-full">
+    <div class="basis-full md:basis-1/2">
+      {% include "item/image-viewer" %}
+    </div>
+    <div class="basis-full md:basis-1/2 mb-12">
+      {% include "item/metadata-table" %}
+    </div>
+  </div>
+</section>
