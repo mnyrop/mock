@@ -1,9 +1,12 @@
-<div class="px-6 pt-20 md:gap-12 flex flex-row md:flex-nowrap flex-wrap items-start">
-  <div class="md:basis-1/2 text-5xl mb-12">
-      <h1 class="">[H1] {{ title }}</h1>
-      <div class="py-6 text-2xl">{{ description }}</div>
+<div class="px-6 py-12 gap-8 sm:gap-12 md:gap-24 flex flex-row md:flex-nowrap flex-wrap-reverse items-center justify-between bg-[#f9f3ec]">
+  <div class="md:basis-1/2 text-5xl">
+    <h1 class="">[H1] {{ title }}</h1>
+    <div class="py-6 text-2xl">{{ description }}</div>
   </div>
-  <div class="md:basis-1/2">
-    <div class="border crossed w-full aspect-3/2"></div>
+  <div class="md:basis-1/2 w-full">
+    {% if img_link %}<a href="{{ img_link }}">{% endif %}
+      <img src="{{ img }}" alt="{{ img_alt }}" class="rounded-md shadow-md w-full max-h-[50vh] object-cover object-top"/>
+      <div class="py-2">{{ img_caption }}</div>
+    {% if img_link %}</a>{% endif %}
   </div>
 </div>
