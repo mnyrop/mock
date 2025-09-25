@@ -4,9 +4,9 @@ description: "I'm a description for the site that shows up on the homepage speci
 layout: "base"
 ---
 
-{% include "site/intro" %}
+{% include "site/intro" img:'/media/erwin-photo.jpg' img_alt:'testing alt' img_caption:"I'm a caption for the image above!" img_link:'/about'%}
 
-{% include "grid/item-cards" heading:"I'm a sub heading for a gallery grid section" %}
+{% include "grid/item-cards" heading:"Collection Items" %}
 
 {% include "feature/exhibit" heading:"I'm a sub heading for an exhibit section (#1)", link:"/exhibits/simple" tex-side:"right"%}
 
