@@ -71,9 +71,243 @@
 
 
     <main class="flex-1 overflow-y-auto overflow-x-hidden pb-24">
-      <header class="px-6 pt-20">
-  <h1 class="text-5xl mb-12">[H1] Explore</h1>
-</header>
+      
+<div class="px-6 pt-20">
+  <h1 class="text-5xl">[H1] Explore</h1>
+  <div class="md:gap-12 flex flex-row md:flex-nowrap flex-wrap items-start">
+    <div class="md:basis-1/4">
+      <div class="md:sticky md:top-20 mt-12 mb-12 md:mb-0">
+        <h2 class="text-3xl mb-6">[H2] Filter</h2>
+        <h3 class="text-xl my-6 font-black">[H3] Field Key</h3>
+        <ul class="space-y-1 [&_a]:underline [&_a]:hover:underline">
+          <li><a href=".">Field Value</a></li>
+          <li><a href=".">Field Value</a></li>
+          <li><a href=".">Field Value</a></li>
+        </ul>
+        <h3 class="text-xl my-6 font-black">[H3] Field Key</h3>
+        <ul class="space-y-1 [&_a]:underline [&_a]:hover:underline">
+          <li><a href=".">Field Value</a></li>
+          <li><a href=".">Field Value</a></li>
+          <li><a href=".">Field Value</a></li>
+        </ul>
+        <h3 class="text-xl my-6 font-black">[H3] Field Key</h3>
+        <ul class="space-y-1 [&_a]:underline [&_a]:hover:underline">
+          <li><a href=".">Field Value</a></li>
+          <li><a href=".">Field Value</a></li>
+          <li><a href=".">Field Value</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="md:basis-3/4 mb-12">
+      
+      <div class="">
+        <h2 class="text-3xl mb-6 px-6">[H2] Search</h2>
+        <form method="GET" action="/mock/explore" class="px-6">
+          <div class="flex">
+            <select name="field" class="border border-gray-300 rounded-l px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="all">All Fields</option>
+              
+              <option value="title">Field #1</option>
+              
+              <option value="title">Field #2</option>
+              
+              <option value="title">Field #3</option>
+              
+              <option value="title">Field #4</option>
+              
+              <option value="title">Field #5</option>
+              
+              <option value="title">Field #6</option>
+              
+              <option value="title">Field #7</option>
+              
+              <option value="title">Field #8</option>
+              
+            </select>
+            <input type="text" name="q" placeholder="Search..." class="flex-grow border-t border-b border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button type="submit" class="cursor-pointer bg-black text-white px-4 py-2 rounded-r  focus:outline-none focus:ring-2 focus:ring-blue-500">Search</button>
+          </div>
+        </form>
+        <section class="px-6 py-24">
+  <h2 class="mb-12 text-3xl">
+    [H2] Results
+  </h2>
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 lg:gap-8"><a href="/mock/item/48859087">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">Worcester</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/48859087.jpg" alt="Worcester" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/48859088">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">Pittsburgh -- Atlantic</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/48859088.jpg" alt="Pittsburgh -- Atlantic" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/48859089">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">Pittsburgh -- Atlantic</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/48859089.jpg" alt="Pittsburgh -- Atlantic" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/48859090">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">Mexico</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/48859090.jpg" alt="Mexico" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/48859091">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">England</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/48859091.jpg" alt="England" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/49099158">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">From Lubeck to Milan</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/49099158.jpg" alt="From Lubeck to Milan" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/49099159">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">Adriatic -- Baltic</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/49099159.jpg" alt="Adriatic -- Baltic" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/49099160">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">Tibet -- C. Asia</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/49099160.jpg" alt="Tibet -- C. Asia" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/49099161">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">From Black Sea thru Turkey to Cyprus</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/49099161.jpg" alt="From Black Sea thru Turkey to Cyprus" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/49099162">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">Australia</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/49099162.jpg" alt="Australia" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/49099163">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">General landscape</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/49099163.jpg" alt="General landscape" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/49362522">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">Sable I. -- Fredericton N.B.</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/49362522.jpg" alt="Sable I. -- Fredericton N.B." class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/49362523">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">Mt. Tremblant -- Catsk</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/49362523.jpg" alt="Mt. Tremblant -- Catsk" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/49362524">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">Jamaica - Bahamas : unfinished</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/49362524.jpg" alt="Jamaica - Bahamas : unfinished" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/49362525">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">Santiago -- Buenos Aires</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/49362525.jpg" alt="Santiago -- Buenos Aires" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/49362526">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">China N-S</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/49362526.jpg" alt="China N-S" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a><a href="/mock/item/49362527">
+  <div class="bg-white">
+    <div>
+      <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div>
+      <p class="leading-snug text-lg">S. Africa</p>
+      <div class="w-full my-6 crossed overflow-hidden relative bg-contain">
+        <img src="/mock/files/49362527.jpg" alt="S. Africa" class="transition duration-300 ease-in-out hover:scale-110">
+      </div>
+    </div>
+  </div>
+</a></div>
+</section>
+      </div>
+    </div>
+  </div>
+</div>
     </main>
     <footer class="h-10 px-6 py-2 border-t">
   <div>I'm a footer! I have custom args: ["hello", "world"]</div>
