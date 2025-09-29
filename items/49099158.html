@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" id="top" class="croll-pt-20 scroll-smooth">
+<html lang="en" id="top" class="scroll-pt-20 scroll-smooth bg-background text-text">
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
@@ -10,39 +10,41 @@
 </head>
 
   <body class="m-0 p-0 flex flex-col h-dvh">
-    <nav class="flex md:flex-nowrap flex-wrap justify-between p-6 backdrop-filter backdrop-blur-[20px]">
-  <a class="text-xl" href="/mock/">
-    Erwin Raisz – A Wax v2 Demo
-  </a>
+    <nav class="flex md:flex-nowrap flex-wrap justify-between p-6 bg-background-alt">
+  <div>
+    <a class="text-xl animated-underline" href="/mock/">
+      Erwin Raisz – A Wax v2 Demo
+    </a>
+  </div>
   <div class="flex flex-row flex-nowrap">
     
       
-      <div class="relative inline-block text-left mr-6">
-        <a class="inline-flex w-full cursor-pointer link" href="/mock/">
+      <div class="min-w-18 relative inline-block text-left mr-6">
+        <a class="inline-flex w-fit cursor-pointer animated-underline" href="/mock/">
           Home
         </a>
       </div>
       
     
       
-      <div class="relative inline-block text-left mr-6">
-        <a class="inline-flex w-full cursor-pointer link" href="/mock/about">
+      <div class="min-w-18 relative inline-block text-left mr-6">
+        <a class="inline-flex w-fit cursor-pointer animated-underline" href="/mock/about">
           About
         </a>
       </div>
       
     
       
-      <div class="group relative dropdown cursor-pointer text-left mr-6">
-        <button id="dropdown-button" class="inline-flex w-full cursor-pointer link">
+      <div class="min-w-18 group dropdown cursor-pointer text-left mr-6">
+        <button class="text-left cursor-pointer animated-underline" aria-haspopup="true">
           Exhibits
         </button>
-        <div class="group-hover:block absolute left-0 dropdown-menu hidden h-auto w-full">
-          <ul class="top-0 py-1 bg-white w-full">
+        <div class="dropdown-menu">
+          <ul class="py-1 relative" role="menu">
             
-            <li class="py-1 w-full"><a class="block" href="/mock/exhibits/simple">Simple</a></li>
+            <li class="py-1 relative" role="none"><a role="menuitem" href="/mock/exhibits/simple">Simple</a></li>
             
-            <li class="py-1 w-full"><a class="block" href="/mock/exhibits/side-by-side">SideBySide</a></li>
+            <li class="py-1 relative" role="none"><a role="menuitem" href="/mock/exhibits/side-by-side">Side-by-Side Scroll</a></li>
             
           </ul>
         </div>
@@ -50,16 +52,16 @@
       
     
       
-      <div class="group relative dropdown cursor-pointer text-left ">
-        <button id="dropdown-button" class="inline-flex w-full cursor-pointer link">
+      <div class="min-w-18 group dropdown cursor-pointer text-left ">
+        <button class="text-left cursor-pointer animated-underline" aria-haspopup="true">
           Collection
         </button>
-        <div class="group-hover:block absolute left-0 dropdown-menu hidden h-auto w-full">
-          <ul class="top-0 py-1 bg-white w-full">
+        <div class="dropdown-menu">
+          <ul class="py-1 relative" role="menu">
             
-            <li class="py-1 w-full"><a class="block" href="/mock/explore">Explore</a></li>
+            <li class="py-1 relative" role="none"><a role="menuitem" href="/mock/explore">Explore</a></li>
             
-            <li class="py-1 w-full"><a class="block" href="/mock/reuse">Reuse</a></li>
+            <li class="py-1 relative" role="none"><a role="menuitem" href="/mock/data">Data</a></li>
             
           </ul>
         </div>
@@ -72,15 +74,15 @@
 
     <main class="flex-1 overflow-y-auto overflow-x-hidden pb-24">
       
-<header class="flex px-6 pt-20">
+<header class="flex px-6 pt-20 mb-6">
   <div class="basis-5/6">
     <h1 class="text-secondary text-5xl mb-12 md:text-4xl md:tracking-tight font-bold leading-tight max-w-3xl">
-      [H1] From Lubeck to Milan (Baltic to the Dolomites)
+     From Lubeck to Milan (Baltic to the Dolomites)
     </h1>
   </div>
   <div class="basis-1/6 h-10 md:h-12 text-right flex justify-end">
     <a aria-label="navigate previous page" href="/mock/items/48859091.html" class="text-2xl tooltip tooltip-bottom" data-tip="Previous item">
-       ← Previous
+       Previous ← 
     </a>
     <span class="mx-6"></span>
     <a aria-label="navigate next page" href="/mock/items/49099159.html" class="text-2xl tooltip tooltip-bottom" data-tip="Next item">
@@ -94,7 +96,7 @@
     <div class="basis-full md:basis-1/2">
       
 
-<div id="map" class="w-full z-0 h-full sticky top-0" style="background-color: #f9f3ec;"></div>
+<div id="map" class="w-full z-0 h-full sticky top-0 bg-background-alt shadow-inner rounded-md"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/openseadragon@3.1/build/openseadragon/openseadragon.min.js"></script>
 <script type="text/javascript">
@@ -136,7 +138,7 @@
   </div>
 </section>
     </main>
-    <footer class="h-10 px-6 py-2 border-t">
+    <footer class="h-10 px-6 py-2 border-t border-text">
   <div>I'm a footer! I have custom args: ["hello", "world"]</div>
 </footer>
   </body>

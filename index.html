@@ -1,48 +1,50 @@
 <!doctype html>
-<html lang="en" id="top" class="croll-pt-20 scroll-smooth">
+<html lang="en" id="top" class="scroll-pt-20 scroll-smooth bg-background text-text">
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title>Erwin Raisz – A Wax v2 Demo | I'm a Longer, More Academic Title or Maybe Even a Tagline for the Site</title>
+  <title>Erwin Raisz – A Wax v2 Demo | I'm a Longer Title or Welcome Tagline for the Site</title>
 
   <link href="/mock/main.css" rel="stylesheet">
   <link rel="icon" href="/mock/assets/favicon.png" type="image/png">
 </head>
 
   <body class="m-0 p-0 flex flex-col h-dvh">
-    <nav class="flex md:flex-nowrap flex-wrap justify-between p-6 backdrop-filter backdrop-blur-[20px]">
-  <a class="text-xl" href="/mock/">
-    Erwin Raisz – A Wax v2 Demo
-  </a>
+    <nav class="flex md:flex-nowrap flex-wrap justify-between p-6 bg-background-alt">
+  <div>
+    <a class="text-xl animated-underline" href="/mock/">
+      Erwin Raisz – A Wax v2 Demo
+    </a>
+  </div>
   <div class="flex flex-row flex-nowrap">
     
       
-      <div class="relative inline-block text-left mr-6">
-        <a class="inline-flex w-full cursor-pointer link" href="/mock/">
+      <div class="min-w-18 relative inline-block text-left mr-6">
+        <a class="inline-flex w-fit cursor-pointer animated-underline" href="/mock/">
           Home
         </a>
       </div>
       
     
       
-      <div class="relative inline-block text-left mr-6">
-        <a class="inline-flex w-full cursor-pointer link" href="/mock/about">
+      <div class="min-w-18 relative inline-block text-left mr-6">
+        <a class="inline-flex w-fit cursor-pointer animated-underline" href="/mock/about">
           About
         </a>
       </div>
       
     
       
-      <div class="group relative dropdown cursor-pointer text-left mr-6">
-        <button id="dropdown-button" class="inline-flex w-full cursor-pointer link">
+      <div class="min-w-18 group dropdown cursor-pointer text-left mr-6">
+        <button class="text-left cursor-pointer animated-underline" aria-haspopup="true">
           Exhibits
         </button>
-        <div class="group-hover:block absolute left-0 dropdown-menu hidden h-auto w-full">
-          <ul class="top-0 py-1 bg-white w-full">
+        <div class="dropdown-menu">
+          <ul class="py-1 relative" role="menu">
             
-            <li class="py-1 w-full"><a class="block" href="/mock/exhibits/simple">Simple</a></li>
+            <li class="py-1 relative" role="none"><a role="menuitem" href="/mock/exhibits/simple">Simple</a></li>
             
-            <li class="py-1 w-full"><a class="block" href="/mock/exhibits/side-by-side">SideBySide</a></li>
+            <li class="py-1 relative" role="none"><a role="menuitem" href="/mock/exhibits/side-by-side">Side-by-Side Scroll</a></li>
             
           </ul>
         </div>
@@ -50,16 +52,16 @@
       
     
       
-      <div class="group relative dropdown cursor-pointer text-left ">
-        <button id="dropdown-button" class="inline-flex w-full cursor-pointer link">
+      <div class="min-w-18 group dropdown cursor-pointer text-left ">
+        <button class="text-left cursor-pointer animated-underline" aria-haspopup="true">
           Collection
         </button>
-        <div class="group-hover:block absolute left-0 dropdown-menu hidden h-auto w-full">
-          <ul class="top-0 py-1 bg-white w-full">
+        <div class="dropdown-menu">
+          <ul class="py-1 relative" role="menu">
             
-            <li class="py-1 w-full"><a class="block" href="/mock/explore">Explore</a></li>
+            <li class="py-1 relative" role="none"><a role="menuitem" href="/mock/explore">Explore</a></li>
             
-            <li class="py-1 w-full"><a class="block" href="/mock/reuse">Reuse</a></li>
+            <li class="py-1 relative" role="none"><a role="menuitem" href="/mock/data">Data</a></li>
             
           </ul>
         </div>
@@ -71,136 +73,155 @@
 
 
     <main class="flex-1 overflow-y-auto overflow-x-hidden pb-24">
-      <div class="px-6 py-12 gap-8 sm:gap-12 md:gap-24 flex flex-row md:flex-nowrap flex-wrap-reverse items-center justify-between bg-[#f9f3ec]">
+      <div class="px-6 py-12 gap-8 sm:gap-12 md:gap-24 flex flex-row md:flex-nowrap flex-wrap-reverse items-center justify-between bg-background-alt">
   <div class="md:basis-1/2 text-5xl">
-    <h1 class="">[H1] I'm a Longer, More Academic Title or Maybe Even a Tagline for the Site</h1>
-    <div class="py-6 text-2xl">I'm a description for the site that shows up on the homepage specifically. I might have links to other parts of the website in a wiki-like way.</div>
+    <h1 class="">I'm a Longer Title or Welcome Tagline for the Site</h1>
+    <div class="py-6 mt-6 text-2xl [&_a]:underline [&_a]:hover:no-underline">
+      <p>I'm a description for the site that shows up on the homepage specifically. I might have links to other parts of the website, e.g., to refer users to the <a href="/mock/about">About</a> and <a href="/mock/explore">Explore</a> pages.</p>
+<p></p></div><p></p>
   </div>
   <div class="md:basis-1/2 w-full">
     <a href="/mock/about">
-      <img src="/mock/media/erwin-photo.jpg" alt="testing alt" class="rounded-md shadow-md w-full max-h-[50vh] object-cover object-top">
+      <img src="/mock/media/testp.png" alt="testing alt" class="rounded-md shadow-md w-full max-h-[50vh] object-cover object-top">
       <div class="py-2">I'm a caption for the image above!</div>
     </a>
   </div>
 </div>
 <section class="px-6 py-20">
-  <h2 class="mb-16 text-4xl">
+  <h2 class="mb-18 text-4xl">
     Collection Items
   </h2>
-  <div class="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-6 lg:gap-8"><a href="/mock/items/48859087" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">Worcester</p>
+  <div class="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-6 lg:gap-8"><a href="/mock/items/48859087" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">Worcester</p>
     <p class="leading-snug py-4">Shows the topography and geology of Worcester. Mass.</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/48859087.jpg" alt="Worcester" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/48859088" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">Pittsburgh -- Atlantic</p>
+</a><a href="/mock/items/48859088" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">Pittsburgh -- Atlantic</p>
     <p class="leading-snug py-4">Cross section of the area between Pittsburgh and the Atlantic Ocean showing cities, geology and topography, together with products manufactured and crops grown in the area.</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/48859088.jpg" alt="Pittsburgh -- Atlantic" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/48859089" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">Pittsburgh -- Atlantic</p>
+</a><a href="/mock/items/48859089" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">Pittsburgh -- Atlantic</p>
     <p class="leading-snug py-4">Cross section of the area between Pittsburgh and the Atlantic Ocean showing cities, geology and topography, together with products manufactured and crops grown in the area. Shows parts of Delaware. </p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/48859089.jpg" alt="Pittsburgh -- Atlantic" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/48859090" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">Mexico</p>
+</a><a href="/mock/items/48859090" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">Mexico</p>
     <p class="leading-snug py-4">Cross section of the area in Mexico between Mazatlan to Culiacan in the west, to Brownsville and Matamoros in the east. Shows cities, geology, agricultural products and industries of the area.</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/48859090.jpg" alt="Mexico" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/48859091" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">England</p>
+</a><a href="/mock/items/48859091" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">England</p>
     <p class="leading-snug py-4">Cross section of the area between Dublin and Wicklow Mountains in Ireland and the Norfolk Broads in England. Shows cities, geology, topography of the area and agricultural products of Ireland.</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/48859091.jpg" alt="England" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/49099158" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">From Lubeck to Milan (Baltic to the Dolomites)</p>
+</a><a href="/mock/items/49099158" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">From Lubeck to Milan (Baltic to the Dolomites)</p>
     <p class="leading-snug py-4">Cross section of the area in Europe from Lübeck, Germany, in the north to the Valley of the Po River, Italy, in the south. Shows geology, topography, and cities of the area.</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/49099158.jpg" alt="From Lubeck to Milan (Baltic to the Dolomites)" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/49099159" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">Adriatic -- Baltic</p>
+</a><a href="/mock/items/49099159" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">Adriatic -- Baltic</p>
     <p class="leading-snug py-4">Cross section of a part of Eastern Europe and the Balkan Peninsula, from Kaliningrad in the north to Dubrovnik in the south. Shows landforms, geology, cities, mineral resources, agricultural products and industries of the area.</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/49099159.jpg" alt="Adriatic -- Baltic" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/49099160" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">Tibet -- Central Asia</p>
+</a><a href="/mock/items/49099160" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">Tibet -- Central Asia</p>
     <p class="leading-snug py-4">Cross section of the area in Asia starting with Chittagong and Dhaka in the south to Stalinsk [Novokuznetsk, Sakha (Russian Federation)] in the north. Shows cities, geology, topography, agricultural products and industries of the area.</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/49099160.jpg" alt="Tibet -- Central Asia" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/49099161" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">From Black Sea thru Turkey to Cyprus</p>
+</a><a href="/mock/items/49099161" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">From Black Sea thru Turkey to Cyprus</p>
     <p class="leading-snug py-4">Cross section of the area between Kastamonu İli (Turkey) in the north to Limassol (Cyprus) in the south. Shows cities, geology and topography, natural resources and crops grown in the area depicted.</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/49099161.jpg" alt="From Black Sea thru Turkey to Cyprus" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/49099162" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">Australia</p>
+</a><a href="/mock/items/49099162" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">Australia</p>
     <p class="leading-snug py-4">Cross section of the area of Australia between Perth and Freemantle on the Indian Ocean to Sydney and Newcastle in the East. Shows cities, geology and topography, agricultural products and mineral resources.  </p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/49099162.jpg" alt="Australia" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/49099163" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">General landscape</p>
+</a><a href="/mock/items/49099163" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">General landscape</p>
     <p class="leading-snug py-4">Cross section of a general landscape showing topography. </p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/49099163.jpg" alt="General landscape" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/49362522" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">Sable Island -- Fredewricton N.B.</p>
+</a><a href="/mock/items/49362522" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">Sable Island -- Fredewricton N.B.</p>
     <p class="leading-snug py-4">Cross section of the area between Sable Island, N.S. through Halifax Region N.S. to Fredericton, N.B.; showing cities, geology and topography, and industries, agricultural crops and fisheries in the area depicted.</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/49362522.jpg" alt="Sable Island -- Fredewricton N.B." class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/49362523" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">Mount Tremblant -- Catskills</p>
+</a><a href="/mock/items/49362523" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">Mount Tremblant -- Catskills</p>
     <p class="leading-snug py-4">Cross section of the Greater Antilles from Jamaica in the South to Bahamas in the North. Shows geology and topography of the area.</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/49362523.jpg" alt="Mount Tremblant -- Catskills" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/49362524" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">Jamaica - Bahamas : unfinished</p>
+</a><a href="/mock/items/49362524" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">Jamaica - Bahamas : unfinished</p>
     <p class="leading-snug py-4">Cross section of the Greater Antilles from Jamaica in the South to Bahamas in the North. Shows geology and topography of the area.</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/49362524.jpg" alt="Jamaica - Bahamas : unfinished" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/49362525" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">Santiago -- Buenos Aires</p>
+</a><a href="/mock/items/49362525" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">Santiago -- Buenos Aires</p>
     <p class="leading-snug py-4">Cross section of the area between Santiago de Chile and Buenos Aires showing cities, geology and topography, climate and crops grown in the area depicted.</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/49362525.jpg" alt="Santiago -- Buenos Aires" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/49362526" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">China, north - south</p>
+</a><a href="/mock/items/49362526" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">China, north - south</p>
     <p class="leading-snug py-4">Cross section of China from Beijing and Dalian in the North to the island of Taiwan in the South. Shows cities, geology, topography, agricultural products and industries of the area.</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/49362526.jpg" alt="China, north - south" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
     </div>
   </div>
-</a><a href="/mock/items/49362527" class="group opacity-90 hover:opacity-100 transition duration-300">
-  <div class="break-inside-avoid-column mb-10"><p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">South Africa</p>
+</a><a href="/mock/items/49362527" class="group brightness-75 hover:brightness-100 transition duration-300">
+  <div class="break-inside-avoid-column mb-10">
+    <p class="leading-snug text-2xl animated-underline">South Africa</p>
     <p class="leading-snug py-4">Cross section of the area in the Republic of South Africa between CapeTown and Cape of Good Hope in the West and the Pietermaritzburg in The North and Durban in the East. Shows also a crossection of a part of Basutoland. Shows cities, geology, agricultural products of the area.</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/mock/files/49362527.jpg" alt="South Africa" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover">
@@ -216,7 +237,7 @@
     <div class="basis-1/2">
       <div class="text-xl py-6 max-w-[60ch]">
         <h2 class="mb-6 text-3xl">
-          [H2] I'm a sub heading for an exhibit section (#1)
+          I'm a sub heading for an exhibit section (#1)
         </h2>
         <p class="mb-4">
           Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
@@ -234,7 +255,7 @@
     <div class="basis-1/2">
       <div class="text-xl py-6 max-w-[60ch] float-end">
         <h2 class="mb-6 text-3xl">
-          [H2] I'm a sub heading for another exhibit section (#2)
+          I'm a sub heading for another exhibit section (#2)
         </h2>
         <p class="mb-4">
           Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
@@ -256,14 +277,14 @@
             <div class="border crossed w-full aspect-4/3 mb-12"></div>
         </div>
         <div class="basis-full md:basis-1/2 mb-12">
-            <h2 class="mb-12 text-3xl">[H2] I'm a sub heading for a featured item</h2>
+            <h2 class="mb-12 text-3xl">I'm a sub heading for a featured item</h2>
             <span class="text-lg">lorem ipsum dolor sic amet</span>
         </div>
     </div>
 </section>
 
     </main>
-    <footer class="h-10 px-6 py-2 border-t">
+    <footer class="h-10 px-6 py-2 border-t border-text">
   <div>I'm a footer! I have custom args: ["hello", "world"]</div>
 </footer>
   </body>
