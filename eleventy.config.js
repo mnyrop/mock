@@ -11,7 +11,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "src/_assets": "/assets" });
   eleventyConfig.addPassthroughCopy({ "node_modules/openseadragon/build/openseadragon": "/assets/vendor/osd" });
-  eleventyConfig.addPassthroughCopy({ "src/_data/demo/files": "/files" });
+  eleventyConfig.addPassthroughCopy({ "src/_data/collection/files": "/files" });
   eleventyConfig.addPassthroughCopy({ "src/_media": "/media" });
 
   eleventyConfig.setLiquidParameterParsing("builtin");
