@@ -2,25 +2,46 @@
 layout: base
 ---
 
-<div class="px-6 pt-20">
-  <h1 class="text-5xl">[H1] {{ title }}</h1>
+<div class="px-6 pt-24 pb-6 mb-12 bg-background-alt">
+  <div class="flex flex-row w-full justify-between items-center mb-12 md:gap-12 flex-wrap md:flex-nowrap">
+    <div class="md:basis-1/4">
+      <h1 class="text-5xl">{{ title }}</h1>
+    </div>
+    <div class="md:basis-3/4">
+      <h2 class="text-4xl mb-6">Search</h2>
+      <form method="GET" action="/explore" class="w-full">
+        <div class="flex w-full">
+          <select name="field" class="border border-text rounded-l px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent">
+            <option value="all">All Fields</option>
+            {% for i in (1..8) %}
+            <option value="title">Field #{{i}}</option>
+            {% endfor %}
+          </select>
+          <input type="text" name="q" placeholder="Search..." class="flex-grow border-t border-b border-text px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent">
+          <button type="submit" class="cursor-pointer bg-text text-background px-4 py-2 rounded-r  focus:outline-none focus:ring-2 focus:ring-accent">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="px-6">
   <div class="md:gap-12 flex flex-row md:flex-nowrap flex-wrap items-start">
     <div class="md:basis-1/4">
-      <div class="md:sticky md:top-20 mt-12 mb-12 md:mb-0">
-        <h2 class="text-3xl mb-6">[H2] Filter</h2>
-        <h3 class="text-xl my-6 font-black">[H3] Field Key</h3>
+      <div class="mb-12 md:mb-0">
+        <h2 class="text-4xl mb-6">Browse Filters</h2>
+        <h3 class="text-xl my-6 font-black">Field Key</h3>
         <ul class="space-y-1 [&_a]:underline [&_a]:hover:underline">
           <li><a href="">Field Value</a></li>
           <li><a href="">Field Value</a></li>
           <li><a href="">Field Value</a></li>
         </ul>
-        <h3 class="text-xl my-6 font-black">[H3] Field Key</h3>
+        <h3 class="text-xl my-6 font-black">Field Key</h3>
         <ul class="space-y-1 [&_a]:underline [&_a]:hover:underline">
           <li><a href="">Field Value</a></li>
           <li><a href="">Field Value</a></li>
           <li><a href="">Field Value</a></li>
         </ul>
-        <h3 class="text-xl my-6 font-black">[H3] Field Key</h3>
+        <h3 class="text-xl my-6 font-black">Field Key</h3>
         <ul class="space-y-1 [&_a]:underline [&_a]:hover:underline">
           <li><a href="">Field Value</a></li>
           <li><a href="">Field Value</a></li>
@@ -29,23 +50,7 @@ layout: base
       </div>
     </div>
     <div class="md:basis-3/4 mb-12">
-      
-      <div class="">
-        <h2 class="text-3xl mb-6 px-6">[H2] Search</h2>
-        <form method="GET" action="/explore" class="px-6">
-          <div class="flex">
-            <select name="field" class="border border-gray-300 rounded-l px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="all">All Fields</option>
-              {% for i in (1..8) %}
-              <option value="title">Field #{{i}}</option>
-              {% endfor %}
-            </select>
-            <input type="text" name="q" placeholder="Search..." class="flex-grow border-t border-b border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <button type="submit" class="cursor-pointer bg-black text-white px-4 py-2 rounded-r  focus:outline-none focus:ring-2 focus:ring-blue-500">Search</button>
-          </div>
-        </form>
-        {% include "grid/item-cards" heading:"Results" %}
-      </div>
+      {% include "grid/item-cards" heading:"Results" padded:false %}
     </div>
   </div>
 </div>

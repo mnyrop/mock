@@ -1,25 +1,27 @@
-<nav class="flex md:flex-nowrap flex-wrap justify-between p-6 backdrop-filter backdrop-blur-[20px]">
-  <a class="text-xl" href="/">
-    {{ site.title }}
-  </a>
+<nav class="flex md:flex-nowrap flex-wrap justify-between p-6 bg-background-alt">
+  <div>
+    <a class="text-xl animated-underline" href="/">
+      {{ site.title }}
+    </a>
+  </div>
   <div class="flex flex-row flex-nowrap">
     {% for item in site.menu %}
       {% if item.sub %}
-      <div class="group relative dropdown cursor-pointer text-left {% unless forloop.last %}mr-6{% endunless %}">
-        <button id="dropdown-button" class="inline-flex w-full cursor-pointer link">
+      <div class="min-w-18 group dropdown cursor-pointer text-left {% unless forloop.last %}mr-6{% endunless %}">
+        <button class="text-left cursor-pointer animated-underline" aria-haspopup="true">
           {{ item.title }}
         </button>
-        <div class="group-hover:block absolute left-0 dropdown-menu hidden h-auto w-full">
-          <ul class="top-0 py-1 bg-white w-full">
+        <div class="dropdown-menu">
+          <ul class="py-1 relative" role="menu">
             {% for sub in item.sub %}
-            <li class="py-1 w-full"><a class="block" href="{{ sub.link }}">{{ sub.title }}</a></li>
+            <li class="py-1 relative" role="none"><a role="menuitem" href="{{ sub.link }}">{{ sub.title }}</a></li>
             {% endfor %}
           </ul>
         </div>
       </div>
       {% else %}
-      <div class="relative inline-block text-left {% unless forloop.last %}mr-6{% endunless %}">
-        <a class="inline-flex w-full cursor-pointer link" href="{{ item.link }}">
+      <div class="min-w-18 relative inline-block text-left {% unless forloop.last %}mr-6{% endunless %}">
+        <a class="inline-flex w-fit cursor-pointer animated-underline" href="{{ item.link }}">
           {{ item.title }}
         </a>
       </div>

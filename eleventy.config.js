@@ -38,5 +38,10 @@ export default async function (eleventyConfig) {
     linkify: true,
     typographer: true
 	}));
+
+  const mdRender = new markdownIt();
+  eleventyConfig.addFilter("markdown", function(string) {
+    return mdRender.render(string);
+  });
 return { pathPrefix: "/mock/" };
 }

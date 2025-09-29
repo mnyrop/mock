@@ -10,17 +10,14 @@
       "title": "Exhibits",
       "sub": [
         { "title": "Simple", "link": "/exhibits/simple" },
-        { "title": "SideBySide", "link": "/exhibits/side-by-side" }
+        { "title": "Side-by-Side Scroll", "link": "/exhibits/side-by-side" }
       ]
     },
     {
       "title": "Collection",
       "sub": [
-        {
-          "title": "Explore",
-          "link": "/explore"
-        },
-        { "title": "Reuse", "link": "/reuse" }
+        { "title": "Explore", "link": "/explore" },
+        { "title": "Data", "link": "/data" }
       ]
     }
   ]

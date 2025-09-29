@@ -1,7 +1,6 @@
-<a href="/items/{{ item.pid }}" class="group opacity-90 hover:opacity-100 transition duration-300">
+<a href="/items/{{ item.pid }}" class="group brightness-75 hover:brightness-100 transition duration-300">
   <div class="break-inside-avoid-column mb-10">
-    {%- comment -%} <div class="border-r border-b border-slate-400 text-slate-600 w-fit pr-2 mb-4">Item</div> {%- endcomment -%}
-    <p class="leading-snug text-2xl relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-black before:origin-left before:scale-x-0 before:transition-transform before:duration-200 group-hover:before:scale-x-100">{{ item.label | default:"Lorem ipsum dolor sit amet consectetur adipiscing elit." }}</p>
+    <p class="leading-snug text-2xl animated-underline">{{ item.label | default:"Lorem ipsum dolor sit amet consectetur adipiscing elit." }}</p>
     <p class="leading-snug py-4">{{ item.description }}</p>
     <div class="my-2 overflow-hidden max-h-600px] min-h-[200px] rounded-md shadow-md flex items-stretch">
       <img src="/files/{{ item.pid }}.jpg" alt="{{ item.label }}" class="block w-full h-full max-h-[800px] min-h-[200px] transition duration-600 ease-in-out transform group-hover:scale-103 object-cover"/>

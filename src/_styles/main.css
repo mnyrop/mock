@@ -8,6 +8,24 @@
   font-style: normal;
 }
 
+@theme {
+  --color-background: #F9F5F1;
+  --color-background-alt: #F2EBE3;
+  --color-text: #0D160B;
+  --color-accent: #7692FF;
+}
+/* 
+::selection {
+  background-color: rgba(75, 0, 130,.4);
+} */
+
+/* @theme {
+  --color-background: #143300;
+  --color-background-alt: #162a09;
+  --color-text: #f9fdf7;
+  --color-accent: #ff6f61;
+} */
+
 :root {
   --font-sans: 'ZurichBT', sans-serif;
 }
@@ -37,13 +55,11 @@
   border-bottom-color: inherit;
 }
 
-/*
-.color-link {
-  @apply text-green-500 border-b hover:border-transparent;
-} */
+.animated-underline {
+  @apply relative inline-block before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-text before:origin-left before:scale-x-0 before:transition-transform before:duration-200 hover:before:scale-x-100 group-hover:before:scale-x-100;
+}
 
-@layer utilities {
-  /* Expanded hamburger-toggle styles to avoid using @apply with complex selectors */
+/* @layer utilities {
   .hamburger-toggle > div {
     height: 0;
     background-color: white;
@@ -54,4 +70,21 @@
   .hamburger-toggle > div::after {
     transform: translateY(0) rotate(-45deg);
   }
+} */
+
+.dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 640ms var(--default-transition-timing-function);
+}
+.group:hover > .dropdown-menu,
+.group:focus-within > .dropdown-menu {
+  max-height: 24rem;
+}
+.dropdown-menu ul {
+  margin: 0;
+}
+
+.openseadragon-canvas {
+  outline: none;
 }
