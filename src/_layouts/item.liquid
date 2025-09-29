@@ -2,7 +2,7 @@
 layout: base
 ---
 
-<header class="flex px-6 pt-20">
+<header class="flex px-6 pt-20 mb-6">
   <div class="basis-5/6">
     <h1 class="text-secondary text-5xl mb-12 md:text-4xl md:tracking-tight font-bold leading-tight max-w-3xl">
      {{ item.label }}
@@ -11,7 +11,7 @@ layout: base
   <div class="basis-1/6 h-10 md:h-12 text-right flex justify-end">
     <a aria-label="navigate previous page" href="{{ pagination.href.previous | default: pagination.href.last}}"
       class="text-2xl tooltip tooltip-bottom" data-tip="Previous item">
-       ← Previous
+       Previous ← 
     </a>
     <span class="mx-6"></span>
     <a aria-label="navigate next page" href="{{ pagination.href.next | default: pagination.href.first }}"

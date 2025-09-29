@@ -1,10 +1,10 @@
 ---
-title: "I'm a Longer, More Academic Title or Maybe Even a Tagline for the Site"
-description: "I'm a description for the site that shows up on the homepage specifically. I might have links to other parts of the website in a wiki-like way."
+title: "I'm a Longer Title or Welcome Tagline for the Site"
+description: "I'm a description for the site that shows up on the homepage specifically. I might have links to other parts of the website, e.g., to refer users to the [About](/about) and [Explore](/explore) pages."
 layout: "base"
 ---
 
-{% include "site/intro" img:'/media/erwin-photo.jpg' img_alt:'testing alt' img_caption:"I'm a caption for the image above!" img_link:'/about'%}
+{% include "site/intro" img:'/media/testp.png' img_alt:'testing alt' img_caption:"I'm a caption for the image above!" img_link:'/about'%}
 
 {% include "grid/item-cards" heading:"Collection Items" %}
 

@@ -1,7 +1,10 @@
-<section class="px-6 py-20">
-  <h2 class="mb-16 text-4xl">
+{% assign padded =  padded | default: true %}
+<section {% if padded %}class="px-6 py-20"{% endif %}>
+  {% if heading %}
+  <h2 class="{% if padded %}mb-18{% else %}mb-6{% endif %} text-4xl">
     {{ heading }}
   </h2>
+  {% endif %}
   {% comment %} <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 lg:gap-8"> {% endcomment %}
   <div class="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-6 lg:gap-8">
     {%- for item in demo.records -%}
