@@ -4,12 +4,13 @@ export default async function (eleventyConfig) {
   const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy")
 
   eleventyConfig.setOutputDirectory("_site");
-  eleventyConfig.setInputDirectory("src/_content");
+  eleventyConfig.setInputDirectory("src/_pages");
   eleventyConfig.setIncludesDirectory("../_components");
   eleventyConfig.setLayoutsDirectory("../_layouts");
   eleventyConfig.setDataDirectory("../_data");
 
   eleventyConfig.addPassthroughCopy({ "src/_assets": "/assets" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/openseadragon/build/openseadragon": "/assets/vendor/osd" });
   eleventyConfig.addPassthroughCopy({ "src/_data/demo/files": "/files" });
   eleventyConfig.addPassthroughCopy({ "src/_media": "/media" });
 
