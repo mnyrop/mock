@@ -7,7 +7,8 @@
   {% endif %}
   {% comment %} <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 lg:gap-8"> {% endcomment %}
   <div class="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-6 lg:gap-8">
-    {%- for item in demo.records -%}
+    {% assign data = data | default: collection.items %}
+    {%- for item in data -%}
       {% include "item/card" item:item %}
     {%- endfor -%}
   </div>
