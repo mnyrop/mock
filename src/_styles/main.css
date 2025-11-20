@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
-@font-face {
+/* @font-face {
   font-family: 'ZurichBT';
   src: url('assets/ZurichBT-Regular.woff') format('woff');
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-}
+} */
 
 @theme {
   --color-background: #F9F5F1;
@@ -27,7 +27,7 @@
 } */
 
 :root {
-  --font-sans: 'ZurichBT', sans-serif;
+  --font-sans: sans-serif;
 }
 
 .crossed {
