@@ -1,20 +1,44 @@
-<div id="map" class="w-full z-0 h-full min-h-[300px] md:min-h-[400px] lg:min-h-[500px] sticky top-0 bg-background-alt shadow-inner rounded-md"></div>
+<div id="map" class="w-full z-0 h-[300px] md:h-[400px] lg:h-[500px] sticky top-0 bg-background-alt shadow-inner rounded-md"></div>
 
 <script src="/assets/vendor/osd/openseadragon.min.js"></script>
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function () {
-    window.viewer = OpenSeadragon({
-      id: "map",
-      sequenceMode: true,
-      prefixUrl: "{{ '/assets/vendor/osd/images/'| htmlBaseUrl }}",
-      tileSources: {
-          type: 'image',
-          url:  "{{ '/files' | htmlBaseUrl }}/{{ item.pid }}.jpg"
-      },
-      placeholderFillStyle: "#FFFFFF",
-      showReferenceStrip: true,
-      showHomeControl: false
-    });
-    // viewer.innerTracker.scrollHandler = false;
+    try {
+      const container = document.getElementById('map');
+      if (!container) {
+        console.error('OpenSeadragon container not found');
+        return;
+      }
+      
+      window.viewer = OpenSeadragon({
+        id: "map",
+        prefixUrl: "{{ '/assets/vendor/osd/images/'| htmlBaseUrl }}",
+        tileSources: {
+            type: 'image',
+            url: "{{ '/files' | htmlBaseUrl }}/{{ item.pid }}.jpg"
+        },
+        placeholderFillStyle: "#FFFFFF",
+        showReferenceStrip: true,
+        showHomeControl: false,
+        showFullPageControl: false,
+        showZoomControl: true,
+        showRotationControl: true,
+        constrainDuringPan: true,
+        visibilityRatio: 0.5,
+        gestureSettingsMouse: {
+          scrollToZoom: false
+        }
+      });
+      
+      // Force resize after initialization
+      setTimeout(function() {
+        if (window.viewer) {
+          window.viewer.viewport.resize();
+        }
+      }, 100);
+      
+    } catch (error) {
+      console.error('Error initializing OpenSeadragon:', error);
+    }
   });
 </script>
